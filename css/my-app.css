@@ -1,0 +1,517 @@
+/*----------------------------------------------------------
+    1. General
+------------------------------------------------------------ */
+
+body {font-family: 'Roboto', sans-serif;}
+
+.button {
+    border: 1px solid #2d7b9f; 
+    background-color: #3186ad; 
+    color: #ffffff; 
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;     
+    font-weight: 500;
+    border-radius: 1px;
+    min-width: 100px;
+}
+
+input[type=submit], input[type=button] {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;    
+}
+
+/* Background Color
+-------------------------------------------------- */
+
+.page {background:#eeeeee;}
+
+/* Footer (Tabbar)
+-------------------------------------------------- */
+
+.tabbar a {color: #ffffff;}
+.tabbar a.active {color: #3186ad;}
+
+/* Footer Icon
+-------------------------------------------------- */
+
+.toolbar-inner .fa-lg {
+    font-size: 1.15em;
+    line-height: 0.75em;
+}
+
+.tabbar-labels span.tabbar-label {
+    font-size: 14px;
+}
+
+.tabbar i.icon {
+    height: 20px;
+    margin-top: 4px;
+}
+
+.tabbar a.link, .tabbar a.tab-link {
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    width: auto;
+}
+
+/* Containers
+-------------------------------------------------- */
+
+.content-block {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; 
+    margin: 35px 12px;
+    padding: 15px;   
+    color: #555;
+    background-color: #FFF; 
+}
+
+.list-block {
+    margin: 35px 12px;
+    font-size: 17px;
+}
+
+/* Body Adjust (For top and bottom toolbars)
+-------------------------------------------------- */
+
+.toolbar-through .page-content {
+    padding-top: 44px; 
+    padding-bottom: 32px; 
+}
+
+/* Title Bar
+-------------------------------------------------- */
+
+.navbar {background: #3186ad;}
+
+.navbar .center,
+.toolbar .center {
+    font-family: "Lobster",cursive;
+    font-size: 24px;
+    font-weight: 700;    
+    line-height: 44px;
+    color: #FFF;
+}
+
+.navbar:after {background-color: #3186ad;}
+
+/* Footer Height
+-------------------------------------------------- */
+
+@media all and (min-width:768px) {
+    .tabbar-labels {height: 54px;}
+}
+
+.tabbar-labels {height: 54px;}
+
+/* Link color
+-------------------------------------------------- */
+
+a {color: #3186ad;}
+
+/* Titles
+-------------------------------------------------- */
+
+.content-block-title {
+    font-family: 'Raleway', sans-serif;     
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #6d6d6d;
+    margin: 20px 12px 8px;
+}
+
+.content-block h2 {
+    margin: 0px;
+    font-size: 16px;
+    line-height:normal;
+}
+
+/* Footer Menu
+-------------------------------------------------- */
+
+.center {color: #FFF;}
+.toolbar {background:#3186ad;}
+.toolbar:before {background-color:#3186ad;}
+.toolbar a {color: #ffffff;}
+
+/* Sidebar
+-------------------------------------------------- */
+
+.panel {background: #34393d;}
+
+.panel-left .content-block {
+    background: transparent !important;
+    margin: 0px 12px;
+    padding: 5px;
+    box-shadow: none !important;
+}
+
+.panel-left .content-block-title {
+    margin: 10px 0px 8px;
+    color: #eee;
+    font-weight: 800;
+}
+
+.panel-left p {color: #aaaaaa;}
+
+.panel-left .list-block {
+    margin: 25px 0px;
+    font-size: 17px;
+    box-shadow: none;
+    background: transparent;
+}
+
+.panel-left .list-block ul {background: transparent;}
+.panel-left .list-block .item-content {padding-left: 0px;}
+
+.panel-left .list-block .item-inner {
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%2060%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'm60%2061.5-38.25%2038.25-9.75-9.75%2029.25-28.5-29.25-28.5%209.75-9.75z'%20fill%3D'%23c7c7cc'%2F%3E%3C%2Fsvg%3E");
+    background-color: transparent;
+    margin-bottom: 0px;    
+}
+
+.panel-left .list-block .item-title {   
+    color: #eee;
+    font-size: 14px;
+}
+
+.panel-left .list-block .item-inner .icon {
+    color: #888;
+    font-size: 1.05em;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 20px;
+}
+
+.panel-left .list-block .item-inner:after {opacity: 0.1; height: 1px;}
+.panel-left .list-block ul:before {opacity: 0.1; height: 1px;}
+.panel-left .list-block ul:after {opacity: 0.1; height: 1px;}
+
+
+/*----------------------------------------------------------
+    2. DataPage Modifications
+------------------------------------------------------------ */
+
+* { box-sizing: border-box; }
+*:before, *:after { box-sizing: border-box; }
+
+/* Radios
+-------------------------------------------------- */
+
+#datapage-form input[type="radio"] { box-sizing: border-box; padding: 0px; }
+
+#datapage-form input[type="radio"] + label {
+    font-weight:400;
+    display:inline-block;
+    position:relative;
+    padding-left:25px;
+    font-size:16px;
+    line-height:24px; 
+    margin: 1px 15px 1px 0px;         
+}
+
+#datapage-form input[type="radio"]{
+    position:absolute;
+    margin-left:-20px;
+}
+
+#datapage-form input[type="radio"] + label:before {
+    content:"";
+    display:inline-block;
+    width: 20px; 
+    height: 20px; 
+    margin-right:10px;
+    position:absolute;
+    left:0;
+    background-color:#fff;
+    border:1px solid #d0d0d0;
+    bottom:2.5px;
+    border-radius:99px;
+    transition:border .3s cubic-bezier(0.455,0.03,0.215,1.33) 0; 
+}
+
+#datapage-form input[type="radio"]:checked + label:before {
+    border-width:5px;
+    border-color: #3186ad;    
+}
+
+#datapage-form input[type="radio"] {
+    display:none;
+}
+
+#datapage-form input[type="radio"][disabled] + label {
+    opacity:.65;
+}
+
+#datapage-form input[type="radio"] + label:before {transition: border 0.3s cubic-bezier(0.455, 0.03, 0.215, 1.33) 0s; }
+
+/* Checkboxes
+-------------------------------------------------- */
+
+#datapage-form input[type="checkbox"] + label {
+    font-weight:400;
+    display:inline-block;
+    position:relative;
+    padding-left:25px;
+    font-size:16px;
+    line-height:24px; 
+    margin: 1px 15px 1px 0px;       
+}
+
+#datapage-form input[type="checkbox"] {
+    position:absolute;
+    margin-left:-20px;
+}
+
+#datapage-form input[type="checkbox"] + label:before {
+    content:"";
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin-right:10px;
+    position:absolute;
+    left:0;
+    background-color:#fff;
+    border:1px solid #d0d0d0;
+    top:1.4px;
+    border-radius:0px;
+    transition:border .2s linear 0s,color .2s linear 0;  
+}
+
+#datapage-form input[type="checkbox"] + label {
+    transition:border .2s linear 0s,color .2s linear 0;
+    white-space: normal;
+}
+
+#datapage-form input[type="checkbox"] + label:after {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    position:absolute;
+    left:3.2px;
+    top:0;
+    font-size:13px;
+    transition:border .2s linear 0s,color .2s linear 0;
+    border-radius:0px;    
+}
+
+#datapage-form input[type="checkbox"] {
+    display:none;
+}
+
+#datapage-form input[type="checkbox"]:checked + label:before {
+    border-width: 10px;
+    border-color: #3186ad;
+}
+
+#datapage-form input[type="checkbox"]:checked + label:after {
+    font-family:"FontAwesome";
+    content:"";
+    color:#fff;
+    top: -1px;    
+}
+
+#datapage-form input[type="checkbox"][disabled] + label {
+    opacity:.65;
+}
+
+#datapage-form input[type="checkbox"][disabled] + label:before {
+    background-color:#eceff3;
+}
+
+
+#datapage-form input[type="checkbox"] + label:before {transition: border 0.2s linear 0s, color 0.2s linear 0s;}
+#datapage-form input[type="checkbox"] + label:after {transition: border 0.2s linear 0s, color 0.2s linear 0s;}
+
+/* DP Mods
+-------------------------------------------------- */
+
+input[type=submit] + input[type=submit] {margin-left: 8px !important;}
+
+/* Calendar Changes
+-------------------------------------------------- */
+
+#calendar-list table[name^="cbTable"] tbody tr > td > div:not(:first-child) {
+  padding: 5px !important;
+  background: #eef7fb;
+  border: 1px solid #3186ad;
+  border-width: 1px 1px 1px 3px;
+  border-color: #d4ecf7 #d4ecf7 #d4ecf7 #3186ad;
+}
+
+#calendar-list table[name^="cbTable"] tbody tr > td > div:not(:first-child) + div {
+  margin-top: 5px;
+}
+
+#calendar-list table[name^="cbTable"] tr:nth-child(2) td:first-child { 
+  border-top: 0px !important;
+}
+
+/*----------------------------------------------------------
+    3. Theme (Black)
+------------------------------------------------------------ */
+
+/* Background Color
+-------------------------------------------------- */
+
+.page {background: #ffffff;}
+
+/* List
+--------------------------------------------------  */
+
+.list-block ul {
+    background: #fff;
+}
+
+.list-block .item-content {
+    padding-left: 0px; 
+    min-height: 44px;
+}
+
+.list-block .item-inner {
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%2060%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'm60%2061.5-38.25%2038.25-9.75-9.75%2029.25-28.5-29.25-28.5%209.75-9.75z'%20fill%3D'%23c7c7cc'%2F%3E%3C%2Fsvg%3E");
+    background-color: #f6f6f6;
+    margin-bottom: 5px;
+}
+
+.list-block .item-title {
+    color: #222;
+    font-size: 16px;
+}
+
+.list-block .item-inner .icon {
+    color: #666;
+    font-size: 1.19em;
+    margin-right: 8px;
+    margin-left: 13px;
+    width: 20px;
+}
+
+.list-block .item-inner:after,
+.list-block ul:before,
+.list-block ul:after {
+    height: 0px;
+    background-color: #eeeeee; 
+}
+
+/* Black Block
+-------------------------------------------------- */
+
+.list-block.tiles ul {
+    background: #ffffff;
+    width: 276px;
+    margin: 0 auto;
+}
+
+.list-block.tiles ul li {
+    display: block;
+    float: left;
+    width: 138px; 
+    padding: 5px;
+}
+
+.list-block.tiles .item-content {
+    padding-left: 0px; 
+    min-height: 44px;
+}
+
+.list-block.tiles .item-inner {
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+    min-height: 64px;
+    background-color: #f6f6f6;    
+    border-radius: 1px;
+    background-image: none;
+    margin-bottom: 0px; 
+}
+
+.list-block.tiles .item-link .item-inner {
+    padding: 25px 15px;
+}
+
+.list-block.tiles .item-title {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.list-block.tiles .item-inner .icon {
+    color: #3186ad;
+    font-size: 2.05em;
+    margin: 7px 0px 13px 0px;
+    width: auto;
+}
+
+.list-block.tiles .item-inner:after,
+.list-block.tiles ul:before,
+.list-block.tiles ul:after  {
+    height: 0px;
+    background-color: #eeeeee; 
+}
+
+/* Containers
+-------------------------------------------------- */
+
+.content-block {padding: 0px;}
+
+/* Bars
+-------------------------------------------------- */
+
+.navbar .center,
+.toolbar .center {color: #ffffff;}
+
+.toolbar {background: #373d41;}
+.toolbar:before {background-color: #373d41;}
+.toolbar a {color: #ffffff;}
+
+.navbar {background: #373d41;}
+.navbar:after {background-color: #373d41;}
+.navbar a {color: #ffffff;}
+
+.tabbar {background: #34393d; box-shadow: none;}
+.tabbar:before {background-color:#34393d; height: 1px;}
+.tabbar a {color: #ffffff;}
+.tabbar a.active {color: #3186ad;}
+
+/* Icons
+-------------------------------------------------- */
+
+i.icon-next {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2015%2015'%3E%3Cg%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M1%2C1.6l11.8%2C5.8L1%2C13.4V1.6%20M0%2C0v15l15-7.6L0%2C0L0%2C0z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+i.icon-prev {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2015%2015'%3E%3Cg%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M14%2C1.6v11.8L2.2%2C7.6L14%2C1.6%20M15%2C0L0%2C7.6L15%2C15V0L15%2C0z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+i.icon-back {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2012%2020'%3E%3Cpath%20d%3D'M10%2C0l2%2C2l-8%2C8l8%2C8l-2%2C2L0%2C10L10%2C0z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");}
+i.icon-forward {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2012%2020'%3E%3Cpath%20d%3D'M2%2C20l-2-2l8-8L0%2C2l2-2l10%2C10L2%2C20z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");}
+i.icon-bars {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2042%2026'%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M0%2C0h4v4H0V0z%20M8%2C1h34v2H8V1z%20M0%2C11h4v4H0V11z%20M8%2C12h34v2H8V12z%20M0%2C22h4v4H0V22z%20M8%2C23h34v2H8V23z'%2F%3E%3C%2Fsvg%3E");}
+
+/* Menu Tiles Collapse
+-------------------------------------------------- */
+
+@media all and (min-width:468px) {
+    .list-block.tiles ul {
+        width: 414px;
+    }
+}
+
+@media all and (min-width:668px) {
+    .list-block.tiles ul {
+        width: 552px;
+    }
+}
+
+@media all and (min-width:768px) {
+    .list-block.tiles ul {
+        width: 690px;
+    }
+}
+
+
